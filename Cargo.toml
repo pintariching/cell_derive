@@ -1,0 +1,20 @@
+[package]
+name = "cell_derive"
+version = "0.1.0"
+edition = "2021"
+description = "A derive macro for quickly implementing `get_or_init` and `get_mut` functions for structs that contain `OnceCell` or `OnceLock` structs."
+readme = "README.md"
+homepage = "https://github.com/pintariching/cell_derive"
+repository = "https://github.com/pintariching/cell_derive"
+authors = ["pintariching"]
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+proc-macro = true
+
+[dependencies]
+quote = "1.0.27"
+syn = { version = "2.0.15", features = [ "full" ] }
+proc-macro2 = "1.0.56"
